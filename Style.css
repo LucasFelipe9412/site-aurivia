@@ -1,0 +1,587 @@
+/* ==========================================================
+   AS CRÔNICAS DE AURÍVIA
+   Site Oficial
+   Desenvolvido para Lucas Felipe da Silva
+========================================================== */
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#F3E8CF;
+
+    color:#2B2B2B;
+
+    font-family:'Cormorant Garamond', serif;
+
+    overflow-x:hidden;
+
+}
+
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* ==========================================================
+   IMAGENS
+========================================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header{
+
+    width:100%;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 8%;
+
+    transition:.4s;
+
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo{
+
+    font-family:'Cinzel', serif;
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+    color:#F3E8CF;
+
+    letter-spacing:2px;
+
+}
+
+
+/* ==========================================================
+   MENU
+========================================================== */
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+
+nav a{
+
+    font-family:'Cinzel', serif;
+
+    color:#F3E8CF;
+
+    font-size:.95rem;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#C8A24A;
+
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+#hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:120px 8% 80px;
+
+    background:linear-gradient(rgba(10,20,35,.85),rgba(10,20,35,.90));
+
+}
+
+
+/* ==========================================================
+   TEXTO HERO
+========================================================== */
+
+.hero-texto{
+
+    width:50%;
+
+}
+
+
+.subtitulo{
+
+    font-family:'Cinzel', serif;
+
+    color:#C8A24A;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+
+.hero-texto h1{
+
+    font-family:'Cinzel', serif;
+
+    color:white;
+
+    font-size:4.5rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+
+.descricao{
+
+    color:#EFE7D2;
+
+    font-size:1.5rem;
+
+    max-width:550px;
+
+    margin-bottom:45px;
+
+}
+
+
+/* ==========================================================
+   BOTÃO
+========================================================== */
+
+.botao{
+
+    display:inline-block;
+
+    background:#C8A24A;
+
+    color:#13233E;
+
+    padding:18px 40px;
+
+    border-radius:50px;
+
+    font-family:'Cinzel', serif;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+.botao:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+}
+
+
+/* ==========================================================
+   CAPA PROVISÓRIA
+========================================================== */
+
+.hero-imagem{
+
+    width:40%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.capa-livro{
+
+    width:360px;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,.45);
+
+    transition:.35s ease;
+
+    animation:respirar 6s ease-in-out infinite;
+
+}
+
+.capa-livro:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+}
+
+
+/* ==========================================================
+   SEÇÕES
+========================================================== */
+
+section:not(#hero){
+
+    padding-top:45px;
+    padding-bottom:20px;
+
+    padding-left:8%;
+    padding-right:8%;
+
+}
+
+
+
+section h2{
+
+    font-family:'Cinzel', serif;
+
+    color:#13233E;
+
+    font-size:2.2rem;
+
+    margin-bottom:18px;
+
+}
+
+
+section p{
+
+    font-size:1.35rem;
+
+    line-height:1.8;
+
+    max-width:900px;
+
+}
+
+
+/* ==========================================================
+   RODAPÉ
+========================================================== */
+
+footer{
+
+    background:#13233E;
+
+    color:#EFE7D2;
+
+    text-align:center;
+
+    padding:50px;
+
+}
+
+
+footer p{
+
+    margin-bottom:12px;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVIDADE
+========================================================== */
+
+/* ==========================================================
+   HEADER AO ROLAR A PÁGINA
+========================================================== */
+
+.header-scroll{
+
+    background:rgba(19,35,62,.96);
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+    padding:18px 8%;
+
+}
+
+/* ==========================================================
+   INDICADOR DE ROLAGEM
+========================================================== */
+
+.scroll-indicador{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    color:#EFE7D2;
+
+    font-family:'Cinzel', serif;
+
+    letter-spacing:2px;
+
+    font-size:.8rem;
+
+}
+
+.seta{
+
+    margin-top:12px;
+
+    font-size:1.7rem;
+
+    animation:flutuar 1.8s infinite;
+
+}
+
+@keyframes flutuar{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   SINOPSE
+========================================================== */
+
+.sinopse{
+
+    max-width:900px;
+
+    margin:20px auto 0;
+
+}
+
+.sinopse p{
+
+    font-size:1.45rem;
+
+    line-height:2;
+
+    margin-bottom:28px;
+
+    text-align:justify;
+
+}
+
+.capitular{
+
+    float:left;
+
+    font-family:'Cinzel', serif;
+
+    font-size:4.5rem;
+
+    line-height:1;
+
+    margin-right:12px;
+
+    color:#C8A24A;
+
+}
+
+@media(max-width:900px){
+
+    #hero{
+
+        position:relative;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        text-align:center;
+
+    }
+
+    .hero-texto{
+
+        width:100%;
+
+    }
+
+    .serie{
+
+    color:#C8A24A;
+
+    font-family:'Cinzel', serif;
+
+    font-size:1.1rem;
+
+    font-weight:400;
+
+    margin-top:-8px;
+
+    margin-bottom:28px;
+
+    letter-spacing:2px;
+
+    }
+
+    .hero-imagem{
+
+        width:100%;
+
+        margin-top:60px;
+
+    }
+
+    .hero-texto h1{
+
+        font-size:3rem;
+
+    }
+
+    nav{
+
+        display:none;
+
+    }
+
+}
+
+@keyframes respirar{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* ==========================================================
+   UNIVERSO E AUTOR
+========================================================== */
+
+.universo-texto,
+.autor-texto{
+
+    max-width:900px;
+
+    margin:20px auto 0;
+
+}
+
+.universo-texto p,
+.autor-texto p{
+
+    font-size:1.45rem;
+
+    line-height:2;
+
+    text-align:justify;
+
+    margin-bottom:24px;
+
+}
+
+#contato p{
+
+    font-size:1.45rem;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
