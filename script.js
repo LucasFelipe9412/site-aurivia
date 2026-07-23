@@ -20,6 +20,16 @@ if(header){
 
 }
 
+//======================================
+// RESTAURA A PÁGINA AO VOLTAR
+//======================================
+
+window.addEventListener("pageshow", () => {
+
+    document.body.classList.remove("fade-out");
+
+});
+
 // ======================================
 // PÁGINA DE COMPRA
 // ======================================
@@ -211,7 +221,7 @@ if (comprarAgora){
 
         setTimeout(() => {
 
-            window.location = this.href;
+            window.location.href = this.href;
 
         }, 450);
 
