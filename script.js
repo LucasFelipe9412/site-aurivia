@@ -261,7 +261,20 @@ Conheci o site de As Crônicas de Aurívia e gostaria de tirar uma dúvida sobre
 // SONS DE AURÍVIA
 //======================================
 
-const trilha=document.getElementById("trilha");
+const trilha = document.getElementById("trilha");
+
+const playlist = [
+    "musicas/aurivia.mp3",
+    "musicas/aurivia2.mp3",
+    "musicas/aurivia3.mp3",
+    "musicas/aurivia4.mp3",
+    "musicas/aurivia5.mp3",
+    "musicas/aurivia6.mp3",
+    "musicas/aurivia7.mp3"
+];
+
+let musicaAtual = 0;
+trilha.src = playlist[musicaAtual];
 
 const btnMusica=document.getElementById("btn-musica");
 
@@ -295,13 +308,16 @@ if(trilha && btnMusica){
 
     });
 
-    trilha.addEventListener("ended",()=>{
+        trilha.addEventListener("ended", () => {
 
-        document.querySelector(".nota-player").classList.remove("tocando");
+        musicaAtual++;
 
-        btnMusica.textContent="▶ Ouvir";
+        if (musicaAtual >= playlist.length) {
+            musicaAtual = 0; // volta para a primeira música
+        }
 
-        tocando=false;
+        trilha.src = playlist[musicaAtual];
+        trilha.play();
 
     });
 
