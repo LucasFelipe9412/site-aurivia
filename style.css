@@ -1107,3 +1107,162 @@ ANIMAÇÃO DO BRASÃO
     }
 
 }
+
+/*======================================
+SONS DE AURÍVIA
+======================================*/
+
+#player-musica{
+
+    position:fixed;
+
+    overflow:hidden;
+
+    bottom:25px;
+
+    right:25px;
+
+    left:auto;
+
+    width:240px;
+
+    background:#13233E;
+
+    border:2px solid #C8A24A;
+
+    border-radius:14px;
+
+    padding:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.30);
+
+    z-index:999;
+
+}
+
+.nota-player{
+
+    position:absolute;
+
+    top:10px;
+
+    right:14px;
+
+    color:#C8A24A;
+
+    font-size:1.3rem;
+
+    animation:flutuarNota 2.5s ease-in-out infinite;
+
+}
+
+@keyframes flutuarNota{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-3px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.player-titulo{
+
+    font-family:'Cinzel', serif;
+
+    color:#EFE7D2;
+
+    text-align:center;
+
+    margin-bottom:12px;
+
+    letter-spacing:1px;
+
+}
+
+#btn-musica{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:12px;
+
+    background:#C8A24A;
+
+    color:#13233E;
+
+    font-family:'Cinzel', serif;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#btn-musica:hover{
+
+    transform:translateY(-2px);
+
+}
+
+@media(max-width:900px){
+
+        #player-musica{
+
+        width:200px;
+
+        right:15px;
+
+        left:auto;
+
+        bottom:15px;
+
+    }
+
+}
+
+.nota-player.tocando{
+
+    animation:flutuarNota 2.5s ease-in-out infinite,
+              brilhoNota 1.8s ease-in-out infinite;
+
+}
+
+@keyframes brilhoNota{
+
+    0%{
+
+        text-shadow:0 0 0px #C8A24A;
+
+    }
+
+    50%{
+
+        text-shadow:0 0 12px #C8A24A;
+
+    }
+
+    100%{
+
+        text-shadow:0 0 0px #C8A24A;
+
+    }
+
+}

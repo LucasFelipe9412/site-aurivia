@@ -1,4 +1,6 @@
-const header=document.getElementById("header");
+console.log("SCRIPT NOVO CARREGADO");
+
+const header = document.getElementById("header");
 
 if(header){
 
@@ -240,6 +242,56 @@ Conheci o site de As Crônicas de Aurívia e gostaria de tirar uma dúvida sobre
 
         window.location.href=
 `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    });
+
+}
+
+//======================================
+// SONS DE AURÍVIA
+//======================================
+
+const trilha=document.getElementById("trilha");
+
+const btnMusica=document.getElementById("btn-musica");
+
+if(trilha && btnMusica){
+
+    let tocando=false;
+
+    btnMusica.addEventListener("click",()=>{
+
+        if(!tocando){
+
+            trilha.play().catch(erro => console.error(erro));
+
+            document.querySelector(".nota-player").classList.add("tocando");
+
+            btnMusica.textContent="♫ Tocando";
+
+            tocando=true;
+
+        }else{
+
+            trilha.pause();
+
+            document.querySelector(".nota-player").classList.remove("tocando");
+
+            btnMusica.textContent="▶ Ouvir";
+
+            tocando=false;
+
+        }
+
+    });
+
+    trilha.addEventListener("ended",()=>{
+
+        document.querySelector(".nota-player").classList.remove("tocando");
+
+        btnMusica.textContent="▶ Ouvir";
+
+        tocando=false;
 
     });
 
