@@ -518,6 +518,8 @@ footer p{
 
         margin-top:60px;
 
+        margin-bottom:120px;
+
     }
 
     .hero-texto h1{
@@ -1228,17 +1230,13 @@ SONS DE AURÍVIA
 
         #player-musica{
 
-    position:absolute;
+            position:static;
 
-    left:50%;
+            width:220px;
 
-    transform:translateX(-50%);
+            margin:35px auto 0;
 
-    bottom:180px;
-
-    width:220px;
-
-}
+        }
 
 }
 
