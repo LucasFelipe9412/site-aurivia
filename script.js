@@ -1,18 +1,22 @@
-const header = document.getElementById("header");
+const header=document.getElementById("header");
 
-window.addEventListener("scroll", () => {
+if(header){
 
-    if (window.scrollY > 40) {
+    window.addEventListener("scroll",()=>{
 
-        header.classList.add("header-scroll");
+        if(window.scrollY>40){
 
-    } else {
+            header.classList.add("header-scroll");
 
-        header.classList.remove("header-scroll");
+        }else{
 
-    }
+            header.classList.remove("header-scroll");
 
-});
+        }
+
+    });
+
+}
 
 // ======================================
 // PÁGINA DE COMPRA
@@ -108,17 +112,11 @@ let valido=true;
 
         setTimeout(()=>{
 
-            window.open(
+           window.location.href =
+                `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+                overlay.classList.remove("ativo");
 
-                `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`,
-
-                "_blank"
-
-            );
-
-            overlay.classList.remove("ativo");
-
-        },5200);
+             },5200);
         });
             
 }
