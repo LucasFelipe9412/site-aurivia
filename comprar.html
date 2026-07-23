@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comprar | A Cruz e a Coroa</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="header-scroll">
+
+    <div class="logo">
+
+        AS CRÔNICAS DE AURÍVIA
+
+    </div>
+
+</header>
+
+<section class="compra">
+
+    <div class="compra-card">
+
+        <img src="Capa.jpg"
+             class="compra-capa"
+             alt="A Cruz e a Coroa">
+
+        <h1>A Cruz e a Coroa</h1>
+
+        <p class="serie">
+
+            Livro I de As Crônicas de Aurívia
+
+        </p>
+
+        <p class="texto-intro">
+
+            Toda grande jornada começa com um primeiro passo.
+            Informe seus dados abaixo e um mensageiro de Aurívia
+            preparará sua solicitação.
+
+        </p>
+
+        <div class="preco">
+
+            <span>Valor unitário</span>
+
+            <strong>R$ 29,90</strong>
+
+        </div>
+
+        <div class="subtotal">
+
+            <span>Subtotal</span>
+
+            <strong id="subtotal">
+
+                R$ 29,90
+
+            </strong>
+
+        </div>
+
+        <form id="pedido">
+
+            <label>Quantidade</label>
+
+            <div class="controle-quantidade">
+
+                <button
+                    type="button"
+                    id="menos"
+                    class="btn-qtd">
+
+                    −
+
+                </button>
+
+                <span id="quantidade">
+
+                    1
+
+                </span>
+
+                <button
+                    type="button"
+                    id="mais"
+                    class="btn-qtd">
+
+                    +
+
+                </button>
+
+            </div>
+
+            <label for="cep">CEP</label>
+
+            <input
+                type="text"
+                id="cep"
+                maxlength="9"
+                placeholder="00000-000"
+                required>
+
+            <small class="erro" id="erro-cep"></small>
+
+            <label for="nome">Nome</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Digite seu nome completo"
+                    required>
+
+                <small class="erro" id="erro-nome"></small>
+
+            <label for="obs">Observações (opcional)</label>
+
+                <textarea
+                    id="obs"
+                    rows="5"
+                    placeholder="Alguma informação que deseja acrescentar?">
+                </textarea>
+
+            <button
+                type="button"
+                id="btn-whatsapp"
+                class="botao">
+
+                📜 Solicitar orçamento
+
+            </button>
+        
+            <p class="privacidade">
+
+                    🔒 Seus dados serão utilizados exclusivamente para calcular o frete e realizar o envio do seu pedido.
+
+            </p>
+
+        </form>
+
+        <div class="explicacao">
+
+            <h3>Como funciona?</h3>
+
+            <p>
+
+                Após receber sua solicitação,
+                calcularei pessoalmente o frete para o seu CEP
+                e apresentarei as opções de envio
+                disponíveis.
+
+            </p>
+
+            <p>
+
+                O pagamento será solicitado
+                somente após sua confirmação.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- MENSAGEIRO -->
+<!-- ===================================== -->
+
+<div id="mensageiro-overlay">
+
+    <div class="mensageiro-card">
+
+        <img src="Brasao.png"
+             alt="Brasão de Aurívia"
+             class="mensageiro-brasao">
+
+        <h2 id="mensageiro-titulo">
+
+            Preparando um mensageiro...
+
+        </h2>
+
+        <p id="mensageiro-texto">
+
+            Registrando sua solicitação nos anais do Reino.
+
+        </p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

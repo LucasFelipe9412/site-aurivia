@@ -707,3 +707,403 @@ footer p{
     transform:scale(1.03);
 
 }
+
+/*======================================
+COMPRA
+======================================*/
+
+.compra{
+
+    padding:140px 8% 80px;
+
+}
+
+.compra-card{
+
+    max-width:760px;
+
+    margin:auto;
+
+    background:#F8F2E6;
+
+    border-radius:18px;
+
+    padding:50px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+}
+
+.compra-capa{
+
+    width:260px;
+
+    margin:auto;
+
+    margin-bottom:30px;
+
+    border-radius:10px;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+}
+
+.compra h1{
+
+    text-align:center;
+
+    font-family:'Cinzel', serif;
+
+    color:#13233E;
+
+    margin-bottom:10px;
+
+}
+
+.texto-intro{
+
+    text-align:center;
+
+    max-width:620px;
+
+    margin:25px auto 45px;
+
+}
+
+.preco,
+.subtotal{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 0;
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+    font-size:1.2rem;
+
+}
+
+.preco strong,
+.subtotal strong{
+
+    color:#C8A24A;
+
+    font-size:1.6rem;
+
+}
+
+.controle-quantidade{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin:15px 0 35px;
+
+}
+
+.btn-qtd{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#13233E;
+
+    color:white;
+
+    font-size:1.6rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn-qtd:hover{
+
+    background:#C8A24A;
+
+    color:#13233E;
+
+}
+
+#quantidade{
+
+    font-family:'Cinzel', serif;
+
+    font-size:2rem;
+
+    min-width:40px;
+
+    text-align:center;
+
+}
+
+/*======================================
+FORMULÁRIO
+======================================*/
+
+#pedido{
+
+    margin-top:40px;
+
+}
+
+#pedido label{
+
+    display:block;
+
+    margin-top:28px;
+
+    margin-bottom:10px;
+
+    font-family:'Cinzel', serif;
+
+    color:#13233E;
+
+}
+
+#pedido input,
+#pedido textarea{
+
+    width:100%;
+
+    padding:16px;
+
+    border:2px solid #D8C8A5;
+
+    border-radius:10px;
+
+    background:white;
+
+    font-size:1.1rem;
+
+    font-family:'Cormorant Garamond', serif;
+
+    transition:.25s;
+
+}
+
+#pedido input:focus,
+#pedido textarea:focus{
+
+    outline:none;
+
+    border-color:#C8A24A;
+
+    box-shadow:0 0 12px rgba(200,162,74,.25);
+
+}
+
+.erro{
+
+    display:block;
+
+    color:#9E2A2A;
+
+    font-size:.95rem;
+
+    margin-top:6px;
+
+    min-height:18px;
+
+}
+
+/*======================================
+BOTÃO DE COMPRA
+======================================*/
+
+#btn-whatsapp{
+
+    width:100%;
+
+    margin-top:40px;
+
+    font-size:1.15rem;
+
+}
+
+#btn-whatsapp:disabled{
+
+    opacity:.8;
+
+    cursor:wait;
+
+    transform:none;
+
+}
+
+.privacidade{
+
+    text-align:center;
+
+    font-size:.95rem;
+
+    color:#666;
+
+    margin-top:18px;
+
+    line-height:1.6;
+
+}
+
+body{
+    transition:opacity .45s ease;
+}
+
+body.fade-out{
+    opacity:0;
+}
+
+/*======================================
+MENSAGEIRO
+======================================*/
+
+#mensageiro-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(10,20,35,.82);
+
+    backdrop-filter:blur(4px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.45s;
+
+    z-index:99999;
+
+}
+
+#mensageiro-overlay.ativo{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.mensageiro-card{
+
+    width:min(420px,90vw);
+
+    background:#F8F2E6;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.mensageiro-brasao{
+
+    width:120px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+}
+
+#mensageiro-titulo{
+
+    font-family:'Cinzel', serif;
+
+    color:#13233E;
+
+    margin-bottom:18px;
+
+}
+
+#mensageiro-texto{
+
+    font-size:1.25rem;
+
+    color:#444;
+
+}
+
+/*======================================
+ANIMAÇÃO DO BRASÃO
+======================================*/
+
+.mensageiro-brasao{
+
+    animation:respirarBrasao 2.5s ease-in-out infinite;
+
+}
+
+@keyframes respirarBrasao{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+.mensageiro-card{
+
+    animation:entradaMensageiro .7s ease;
+
+}
+
+@keyframes entradaMensageiro{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
