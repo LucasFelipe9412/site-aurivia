@@ -216,3 +216,31 @@ if (comprarAgora){
     });
 
 }
+
+//======================================
+// CONTATO
+//======================================
+
+const btnContato = document.getElementById("btn-contato");
+
+if(btnContato){
+
+    btnContato.addEventListener("click",(e)=>{
+
+        e.preventDefault();
+
+        const numero="5531992778250";
+
+        const mensagem=
+`Olá, Lucas!
+
+Conheci o site de As Crônicas de Aurívia e gostaria de tirar uma dúvida sobre o livro.
+
+`;
+
+        window.location.href=
+`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    });
+
+}
