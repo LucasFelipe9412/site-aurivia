@@ -148,6 +148,8 @@ nav a:hover{
 
 #hero{
 
+    position:relative;
+
     min-height:100vh;
 
     display:flex;
@@ -1118,15 +1120,11 @@ SONS DE AURÍVIA
 
 #player-musica{
 
-    position:fixed;
+    position:absolute;
 
-    overflow:hidden;
+    right:8%;
 
-    bottom:25px;
-
-    right:25px;
-
-    left:auto;
+    bottom:35px;
 
     width:240px;
 
@@ -1140,7 +1138,7 @@ SONS DE AURÍVIA
 
     box-shadow:0 10px 30px rgba(0,0,0,.30);
 
-    z-index:999;
+    z-index:20;
 
 }
 
@@ -1230,13 +1228,11 @@ SONS DE AURÍVIA
 
         #player-musica{
 
-        width:200px;
+    position:static;
 
-        right:15px;
+    width:220px;
 
-        left:auto;
-
-        bottom:15px;
+    margin:35px auto 0;
 
     }
 
