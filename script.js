@@ -112,10 +112,10 @@ let valido=true;
 
         setTimeout(()=>{
 
-           window.location.href =
+           overlay.classList.remove("ativo");
+            window.location.href =
                 `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-                overlay.classList.remove("ativo");
-
+                
              },5200);
         });
             
