@@ -588,7 +588,13 @@ footer p{
 
         width:220px;
 
-        margin:35px auto 0;
+        margin:25px auto 40px;
+
+    }
+
+    .hero-imagem{
+
+        margin-bottom:25px;
 
     }
 
