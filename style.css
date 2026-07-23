@@ -380,7 +380,7 @@ footer p{
 
     position:absolute;
 
-    bottom:30px;
+    bottom:35px;
 
     left:50%;
 
@@ -518,8 +518,6 @@ footer p{
 
         margin-top:60px;
 
-        margin-bottom:120px;
-
     }
 
     .hero-texto h1{
@@ -581,6 +579,22 @@ footer p{
     box-shadow:0 15px 40px rgba(0,0,0,.20);
 
     transition:.35s;
+
+    }
+
+    #player-musica{
+
+        position:static;
+
+        width:220px;
+
+        margin:35px auto 0;
+
+    }
+
+        .scroll-indicador{
+
+            display:none;
 
     }
 
@@ -1223,20 +1237,6 @@ SONS DE AURÍVIA
 #btn-musica:hover{
 
     transform:translateY(-2px);
-
-}
-
-@media(max-width:900px){
-
-        #player-musica{
-
-            position:static;
-
-            width:220px;
-
-            margin:35px auto 0;
-
-        }
 
 }
 
