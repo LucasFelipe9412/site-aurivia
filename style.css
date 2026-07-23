@@ -380,7 +380,7 @@ footer p{
 
     position:absolute;
 
-    bottom:35px;
+    bottom:30px;
 
     left:50%;
 
@@ -1228,13 +1228,17 @@ SONS DE AURÍVIA
 
         #player-musica{
 
-    position:static;
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    bottom:180px;
 
     width:220px;
 
-    margin:35px auto 0;
-
-    }
+}
 
 }
 
