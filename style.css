@@ -811,6 +811,60 @@ COMPRA
 
 }
 
+/*======================================
+KINDLE
+======================================*/
+
+.kindle-opcao{
+
+    text-align:center;
+
+    margin:28px 0 35px;
+
+}
+
+.kindle-opcao p{
+
+    margin-bottom:12px;
+
+    font-size:1.15rem;
+
+    color:#555;
+
+}
+
+.btn-kindle{
+
+    display:inline-block;
+
+    padding:12px 26px;
+
+    border:2px solid #C8A24A;
+
+    border-radius:30px;
+
+    background:transparent;
+
+    color:#13233E;
+
+    font-family:'Cinzel', serif;
+
+    font-size:1rem;
+
+    transition:.3s;
+
+}
+
+.btn-kindle:hover{
+
+    background:#C8A24A;
+
+    color:#13233E;
+
+    transform:translateY(-2px);
+
+}
+
 .preco strong,
 .subtotal strong{
 
